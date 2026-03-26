@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Clone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Pretendard', sans-serif;
+      background: linear-gradient(180deg, #0a0a0a, #111);
+      color: white;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: #888;
+      margin-bottom: 50px;
+    }
+
+    .grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      background: #151515;
+      border-radius: 18px;
+      padding: 22px;
+      text-align: left;
+      transition: 0.25s;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      background: #1c1c1c;
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .card p {
+      margin-top: 8px;
+      color: #aaa;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>jjerrii</h1>
+    <div class="subtitle">links & stuff</div>
+
+    <div class="grid">
+      <div class="card" onclick="go('https://instagram.com')">
+        <h2>Instagram</h2>
+        <p>@yourname</p>
+      </div>
+
+      <div class="card" onclick="go('https://twitter.com')">
+        <h2>Twitter</h2>
+        <p>@yourname</p>
+      </div>
+
+      <div class="card" onclick="go('https://github.com')">
+        <h2>GitHub</h2>
+        <p>your repo</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function go(link) {
+      window.open(link, '_blank');
+    }
+  </script>
+</body>
+</html>
